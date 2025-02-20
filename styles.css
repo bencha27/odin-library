@@ -1,0 +1,173 @@
+/* Reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+  font-size: 100%;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Remove button styles */
+button {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* Page */
+body {
+  font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 96px 1fr;
+  grid-template-areas: 
+    "header header"
+    "main sidebar";
+}
+
+
+
+
+/* Header */
+.header {
+  grid-area: header;
+  /* background-color: burlywood; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+
+
+/* Main */
+.main {
+  grid-area: main;
+  border: 24px solid burlywood;
+  padding: 24px 0;
+  background-color: navajowhite;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-rows: 200px;
+  grid-auto-rows: 200px;
+  gap: 24px 24px;
+  justify-content: center;
+}
+
+.book-card {
+  background-color: white;
+  padding: 8px;
+  position: relative;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-status {
+  font-size: 0.75rem;
+}
+
+.book-status:focus-visible {
+  outline-color: navy;
+}
+
+.remove-book-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.remove-book-button .material-symbols-outlined:hover {
+  font-variation-settings: "FILL" 1;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: blue;
+}
