@@ -111,12 +111,7 @@ function addBook(title, author, numPages, status) {
 
 
 // Create demo books
-addBook("Seeing and Savoring Jesus Christ", "John Piper", 128, "Completed");
-addBook("Desiring God", "John Piper", 368, "In progress");
-addBook("In Defense of Food", "Michael Pollan", 205, "Completed");
-addBook("Feel-Good Productivity", "Ali Abdaal", 304, "In progress");
-addBook("Systematic Theology", "Wayne Grudem", 1616, "In progress");
-addBook("The Holiness of God", "R.C. Sproul", 240, "Not started");
+addBook("Demo Book", "Author", 123, "Completed");
 
 
 
