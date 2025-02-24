@@ -14,11 +14,11 @@ function addBook(title, author, numPages, status) {
 }
 
 // Create demo books
-addBook("Seeing and Savoring Jesus Christ", "John Piper", 128, "Read");
-addBook("Desiring God", "John Piper", 368, "Reading");
-addBook("In Defense of Food", "Michael Pollan", 205, "Reading");
-addBook("Feel-Good Productivity", "Ali Abdaal", 304, "Reading");
-addBook("Systematic Theology", "Wayne Grudem", 1616, "Reading");
+addBook("Seeing and Savoring Jesus Christ", "John Piper", 128, "Completed");
+addBook("Desiring God", "John Piper", 368, "In progress");
+addBook("In Defense of Food", "Michael Pollan", 205, "Completed");
+addBook("Feel-Good Productivity", "Ali Abdaal", 304, "In progress");
+addBook("Systematic Theology", "Wayne Grudem", 1616, "In progress");
 addBook("The Holiness of God", "R.C. Sproul", 240, "Not started");
 
 
@@ -52,18 +52,18 @@ function renderBook(book) {
   const selectEl = document.createElement("select");
   selectEl.classList.add("book-status");
   const optionEl1 = document.createElement("option");
-  optionEl1.textContent = "Read";
+  optionEl1.textContent = "Completed";
   const optionEl2 = document.createElement("option");
-  optionEl2.textContent = "Reading";
+  optionEl2.textContent = "In progress";
   const optionEl3 = document.createElement("option");
   optionEl3.textContent = "Paused";
   const optionEl4 = document.createElement("option");
   optionEl4.textContent = "Not started";
   switch (book.status) {
-    case "Read": 
+    case "Completed": 
       optionEl1.setAttribute("selected", "");
       break;
-    case "Reading": 
+    case "In progress": 
       optionEl2.setAttribute("selected", "");
       break;
     case "Paused": 
