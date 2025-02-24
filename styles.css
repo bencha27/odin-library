@@ -148,8 +148,8 @@ h1 {
   font-size: 0.75rem;
 }
 
-.book-status:focus-visible {
-  outline-color: navy;
+.book-status:focus {
+  outline: none;
 }
 
 .remove-book-button {
@@ -183,32 +183,20 @@ h1 {
   margin-top: 32px;
 }
 
-select {
+.sidebar select {
   border: 2px solid lightgray;
 }
 
-button {
+.sidebar button {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: 2px solid silver;
   background-color: navajowhite;
 }
 
-button:hover {
+.sidebar button:hover {
   outline: 3px solid steelblue;
   cursor: pointer;
-}
-
-
-.sort-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.sort-section select {
-  padding: 0.25rem;
-  border-radius: 0.5rem;
 }
 
 
@@ -217,12 +205,14 @@ button:hover {
   /* display: none; */
 }
 
-.add-button {
+#add-button {
   font-size: 1.25rem;
-  padding: 0.5rem 0.5rem;
-  border-radius: 0.5rem;
 }
 
+
+.add-form-section {
+  display: none;
+}
 
 .form-row {
   margin-bottom: 1rem;

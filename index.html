@@ -22,58 +22,40 @@
     </div>
   
     <div class="sidebar">
-      <div class="sort-section">
-        <select id="sort-select">
-          <option value="">Sort by</option>
-          <option value="title">Title</option>
-          <option value="author">Author</option>
-          <option value="pages">Pages</option>
-          <option value="status">Status</option>
-        </select>
-        
-        <select id="filter-select">
-          <option value="">Filter by status</option>
-          <option value="completed">Completed</option>
-          <option value="in-progress">In progress</option>
-          <option value="paused">Paused</option>
-          <option value="not-started">Not started</option>
-        </select>
-      </div>
-
       <div class="add-button-section">
-        <button type="button" class="add-button">Add a book</button>
+        <button type="button" id="add-button">Add a book</button>
       </div>
 
       <div class="add-form-section">
-        <form action="" method="get" id="add-form">
+        <form action="" method="post" name="add-book">
           <div class="form-row">
             <label for="form-title">Title</label>
-            <input type="text" id="form-title" name="form-title" placeholder="Required" required>
+            <input type="text" id="form-title" name="title" placeholder="Required" required>
           </div>
           
           <div class="form-row">
             <label for="form-author">Author</label>
-            <input type="text" id="form-author" name="form-author">
+            <input type="text" id="form-author" name="author">
           </div>
           
           <div class="form-row">
             <label for="form-pages">Number of pages</label>
-            <input type="tel" id="form-pages" name="form-pages">
+            <input type="tel" id="form-pages" name="pages">
           </div>
           
           <div class="form-row">
             <label for="form-status">Status</label>
-            <select id="form-status">
-              <option selected>Completed</option>
-              <option>In progress</option>
-              <option>Paused</option>
-              <option>Not started</option>
+            <select id="form-status" name="status">
+              <option value="Completed" selected>Completed</option>
+              <option value="In progress">In progress</option>
+              <option value="Paused">Paused</option>
+              <option value="Not started">Not started</option>
             </select>
           </div>
           
           <div class="form-row">
-            <button type="submit">Add book</button>
-            <button type="button">Cancel</button>
+            <button type="submit" id="submit-button">Add book</button>
+            <button type="button" id="cancel-button">Cancel</button>
           </div>
         </form>
       </div>
